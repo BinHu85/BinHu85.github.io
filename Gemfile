@@ -18,6 +18,8 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
     gem 'jekyll-target-blank'
+    gem 'uri', '1.0.2'
+    gem 'open-uri', '0.5.0'
 end
 group :other_plugins do
     gem 'feedjira'
