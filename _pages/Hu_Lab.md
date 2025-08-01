@@ -17,21 +17,56 @@ nav_order: 4
   }
   .member-card {
     text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   }
   .member-photo {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
+    border: 3px solid #dee2e6;
+    transition: border-color 0.3s ease;
+  }
+  .member-card:hover .member-photo {
+    border-color: #007bff;
   }
   .member-name {
     font-size: 1.2em;
-    font-weight:bold;
-    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #333;
   }
-  .member-role, .member-research{
-    font-size: 1em;
-    color: #555;
+  .member-role {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .member-research {
+    font-size: 0.95em;
+    color: #007bff;
+    font-weight: 500;
+    background-color: #e3f2fd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .member-interests {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+    padding: 0 10px;
+    line-height: 1.4;
   }
   .funding-logos {
     text-align: center;
@@ -128,6 +163,9 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
     <div class="member-name">{{ member.name }}</div>
     <div class="member-role">{{ member.role }}</div>
     <div class="member-research">{{ member.research }}</div>
+    {% if member.interests %}
+    <div class="member-interests">{{ member.interests }}</div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
@@ -144,6 +182,9 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
     <div class="member-name">{{ member.name }}</div>
     <div class="member-role">{{ member.role }}</div>
     <div class="member-research">{{ member.research }}</div>
+    {% if member.interests %}
+    <div class="member-interests">{{ member.interests }}</div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
@@ -160,6 +201,9 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
     <div class="member-name">{{ member.name }}</div>
     <div class="member-role">{{ member.role }}</div>
     <div class="member-research">{{ member.research }}</div>
+    {% if member.interests %}
+    <div class="member-interests">{{ member.interests }}</div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
