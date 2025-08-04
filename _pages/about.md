@@ -21,6 +21,8 @@ Dr. Bin Hu joins the Department of Engineering Technology at the University of H
 
 Dr. Bin Hu directs the Networked Autonomous and Intelligent Learning (NAIL) Lab. The NAIL Lab focuses on cutting-edge research in learning-based control, optimization, and machine learning, with applications spanning cybersecurity, autonomous robotics, human-machine automation, IoT systems, and vehicular networks. Our lab develops intelligent autonomous systems that can learn, adapt, and operate safely in complex, dynamic environments.
 
+Learn more about our [NAIL Lab team](/team-members/), [facilities](/resources/), [research demonstrations](/demonstrations/), and [outreach activities](/outreach/).
+
 ***
 
 #### :fire: **Multiple Openings** :fire:
