@@ -49,6 +49,45 @@ bundle exec jekyll build --lsi
 ./bin/cibuild
 ```
 
+### GitHub Pages Deployment Process
+**IMPORTANT**: This repository uses **GitHub Actions workflow** for deployment, NOT the standard GitHub Pages Jekyll build.
+
+```bash
+# Push changes to trigger GitHub Actions deployment (correct workflow)
+git push origin main
+
+# Force push if needed (when branches are out of sync)
+git push origin main --force
+
+# Check deployment status
+# Look for "Jekyll Build and Deploy" workflows in GitHub Actions at:
+# https://github.com/BinHu85/BinHu85.github.io/actions
+```
+
+**Deployment Process:**
+1. Push to `main` branch triggers GitHub Actions workflow
+2. GitHub Actions builds the site and deploys to `gh-pages` branch
+3. GitHub Pages serves from `gh-pages` branch
+4. Changes may take 2-5 minutes to appear on live site
+
+**If Changes Don't Appear:**
+1. **Check build status** - Go to GitHub Actions tab and verify the workflow completed successfully
+2. **Hard refresh browser** - Use Ctrl+F5 (Windows) or Cmd+Shift+R (Mac) to bypass cache
+3. **Clear browser cache** - Clear cache for the specific site
+4. **Try incognito/private mode** - This bypasses all browser caching
+5. **Wait 5-10 minutes** - GitHub Pages can have deployment delays
+
+**Common Issues:**
+- Problematic demo posts with custom Liquid tags (`{% twitter %}`, `{% mermaid %}`)
+- Ruby gem conflicts (especially `uri` gem) - remove explicit uri dependency from Gemfile
+- Build failures: Check GitHub Actions logs for specific error messages
+- Caching issues: Always try hard refresh before assuming build failed
+
+**Working Configuration:**
+- Use the original Gemfile and _config.yml that were working
+- Only remove problematic demo posts, don't modify gem dependencies unless necessary
+- Make incremental changes and test each one individually
+
 ### Docker Commands
 ```bash
 # Run with pre-built Docker image
