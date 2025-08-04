@@ -1,9 +1,9 @@
 ---
 layout: default
-permalink: /lab/
-title: NAIL Lab
+permalink: /team-members/
+title: Team Members
 description:
-nav: true
+nav: false
 nav_order: 4
 ---
 
@@ -14,6 +14,9 @@ nav_order: 4
     gap: 20px;
     justify-items: center;
     align-items: start;
+  }
+  .member-grid:has(.member-card:only-child) {
+    justify-items: start;
   }
   .member-card {
     text-align: center;
@@ -36,14 +39,14 @@ nav_order: 4
     transition: border-color 0.3s ease;
   }
   .member-card:hover .member-photo {
-    border-color: #007bff;
+    border-color: #C8102E;
   }
   .member-name {
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 8px;
-    color: #333;
+    color: #C8102E;
   }
   .member-role {
     font-size: 0.9em;
@@ -91,6 +94,48 @@ nav_order: 4
       max-height: 60px;
       max-width: 100px;
     }
+  }
+
+  .lab-director-card {
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .lab-director-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  .lab-director-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #dee2e6;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  .lab-director-card:hover .lab-director-photo {
+    border-color: #C8102E;
+  }
+  .lab-director-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .lab-director-name a {
+    color: #C8102E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .lab-director-name a:hover {
+    color: #A00D26;
+    text-decoration: underline;
   }
 </style>
 
@@ -149,8 +194,11 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 
 ### Current Team Members
 
-##### **Lab Director**
--[Dr. Bin Hu](https://binhu85.github.io/)
+<div class="lab-director-card">
+  <img class="lab-director-photo" src="/assets/img/Hu_now.jpg" alt="Dr. Bin Hu">
+  <div class="lab-director-name"><a href="/">Dr. Bin Hu</a></div>
+  <div class="member-role">PI & NAIL Lab Director</div>
+</div>
 
 
 ---
@@ -172,7 +220,7 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 
 ---
 
-##### **Master Students and Research Assistants**
+##### **Master Students**
 
 <div class="member-grid">
   {% assign members = site.data.master_members %}
@@ -210,13 +258,26 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 ---
 
 ### Alumni
-##### **Previous Undergraduate Students, Master Students and Research Assistants**
+
+##### **Previous Master Students**
+- **Pooyan Ghodrati** (2025, M.S. Engineering Data Science, RA funded by NASA at UH, now Data Scientist at Toyo Financial Group)
+- **Jahanvi Hitesh Dave** (2023, M.S. Computer Science, RA funded by NSF at UH, now at Goldman Sachs)
+
+##### **Previous Undergraduate Students**
+- **Victor Le** (2025, AI-powered Drone Project at UH)
+- **Angel Gomez** (2025, AI-powered Drone Project at UH)
+- **Hieu Le** (2025, AI-powered Drone Project at UH)
+- **Nicolas Upshaw** (2025, AI-powered Drone Project at UH)
+- **Yosef Abushaaban** (2025, AI-powered Race Car Project at UH)
+- **Muhammad Ansari** (2025, AI-powered Race Car Project at UH)
+- **Damian Castillo** (2025, AI-powered Race Car Project at UH)
+- **Asaad Elsayed** (2025, AI-powered Race Car Project at UH)
+- **Alejandro Zamarron** (2025, AI-powered Race Car Project at UH)
 - **Javier Caudle** (2024, Captone project-*Advance Surveillance Drone* at UH)
 - **Steven Comayagua** (2024, Captone project-*Advance Surveillance Drone* at UH)
 - **Leandra Guzman** (2024, Captone project-*Advance Surveillance Drone* at UH)
 - **Weijie Huang** (2024, Captone project-*Advance Surveillance Drone* at UH)
 - **Edward Perez** (2024, Captone project-*Advance Surveillance Drone* at UH)
-- **Jahanvi Hitesh Dave** (2023, RA funded by NSF at UH, now at Goldman Sachs)
 - **Kristof Siska** (2019–2022, RA funded by NSF, now Master's student at Old Dominion University)  
 - **Jacob Michalick** (2022, RA funded by DoD at ODU)  
 - **Skye Taylor** (2021, RA funded by NSF REU, now Master's student at University of Virginia)  

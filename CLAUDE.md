@@ -96,3 +96,60 @@ bundle exec jekyll build --lsi
 - Bibliography formatting handled by jekyll-scholar plugin
 - Dark/light theme toggle available
 - Mobile-responsive design with Bootstrap 4.6.1
+
+## Recent Updates & Current Structure
+
+### NAIL LAB Navigation (Dropdown Menu)
+The site now features a comprehensive NAIL LAB dropdown menu with the following sections:
+- **Team Members** (`/team-members/`) - Lab director, PhD students, master students, undergrad projects, and alumni
+- **Lab Resources** (`/resources/`) - Equipment, facilities, and capabilities showcase
+- **Demonstrations** (`/demonstrations/`) - Research videos and project demos
+- **Outreach** (`/outreach/`) - Community engagement and educational programs
+
+### Lab Resources Page (`_pages/resources.md`)
+- **Multi-Robotic Platform**: 9 robotic platforms including drones, ground robots, and quadruped
+  - 3x ModalAI Seeker SLAM Drones, ModalAI Sentinel 5G drone, 3x ROSbot 2.0 Pro, Jackal J100, Custom drone, Unitree Go2
+- **Edge Computing & Development Platforms**: NVIDIA Jetson devices, MAX78000, STM32F746NG kits
+- **Advanced Sensors & Equipment**: OptiTrack motion capture, RealSense cameras, LiDAR, 3D printer
+- **Testing Arena**: 800 sq ft research space with 24×24×8 ft OptiTrack volume
+- All sections use card-based layouts with images from `assets/img/facilities/`
+- Dark mode compatible with CSS variables
+
+### Team Members Page (`_pages/Hu_Lab.md`)
+- **Lab Director**: Dr. Bin Hu with larger photo (200px) and UH red color scheme
+- **PhD Students**: Richie, Shaharyar, Benedictus with updated research interests
+- **Master Students**: Tony Tran (current)
+- **Alumni**: Organized by degree level (Master/Undergraduate) with graduation years
+- **Color scheme**: UH red (#C8102E) for names and links, blue (#007bff) for research tags
+- **Photos**: Gray borders that turn red on hover
+
+### Demonstrations Page (`_pages/demonstrations.md`)
+- **Lab Equipment Capabilities** (3 videos): Multi-robot coordination, SLAM demos, autonomous navigation
+- **Research Projects & Publications** (4 videos): ICRA 2025 papers and submissions
+- **Student Research Projects** (1 video): Undergraduate capstone project
+- All videos embedded from YouTube with responsive 16:9 containers
+
+### Outreach Page (`_pages/outreach.md`)
+- **Educational Programs**: K-12 visits, summer camps, teacher development
+- **Community Events**: Science fair judging, public demos, engineering week
+- Images sourced from actual outreach activities in corresponding folders
+
+### Data Files Updated
+- `_data/phd_members.yml`: Updated research interests for all PhD students
+- `_data/master_members.yml`: Removed graduated students, kept current members
+- Alumni moved from data files to static lists in Team Members page
+
+### Image Organization
+- **Facilities**: `assets/img/facilities/` - All lab equipment images (JPG format)
+- **Members**: `assets/img/members/` - Team member photos
+- **Outreach**: `assets/img/outreach/` - Community engagement photos
+- **Equipment images**: jetson_orin.jpg, jetson_xavier.jpg, jetson_nano.jpg, max78000.jpg, stm32f746.jpg, optitrack.jpg, realsense_d435i.jpg, livox_mid360.jpg, hokuyo_ust10lx.jpg, prusa_mk4.jpg
+
+### Contact Information
+- Primary contact: bhu12@uh.edu (used throughout site for contact links)
+- All "contact us" links point to this email address
+
+### Development Environment
+- Ruby 3.1.2 with rbenv
+- Jekyll ~4.3 with al-folio theme
+- Local development: `bundle exec jekyll serve --lsi`

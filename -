@@ -1,0 +1,31 @@
+Facilities, Equipment, and Other Resources
+		Networked Autonomous and Intelligent Learning (NAIL) Lab
+	•	PI Bin Hu’s Equipment
+PI Hu’s lab is equipped with a heterogenous multi-robotic platform and computing resources to support the proposed research.
+
+	•	 Multi-robotic platform  
+The multi-robotic platform is comprised by a ground robot testbed consisting of three ROSbot 2.0 pro autonomous robots and a Jackal J100 robot with a LiDAR 3D - Velodyne Puck (VLP-16) and one Intel RealSense D435 cameras, and a multi-drone platform that includes one VOXL2 AI & 5G development drone Sentinel, three Seeker autonomous SLAM drones and one AI powered customized drone. The platform also includes one Unitree Go2 quadruped robot.
+
+                      
+	•	ModalAI Seeker SLAM Drone		   (b) ModalAI Sentinel 5G & AI Drone
+		             
+(c) ROSbot 2 Pro robot                                 (d) Jackal robot with 3D LiDAR (VLP-16) 
+						       and Intel RealSense D435
+                              
+(e) Self-assembled Customized Drone                (f) Unitree Go2 Quadruped Robot
+Figure 1: Multi-robotic Platform
+	•	Computing resources and other devices
+The computing resources in Dr. Bin Hu’s lab include 
+	•	One Dell Precision 7920 Tower workstation with Dual Intel Xeon Bronze 3206R CPU, Dual NVIDIA RTX A5500 GPU, 64 GB Memory and 2 TB NVMe
+	•	One Dell Precision 5820 Tower workstation with Intel Xeon Processor W-2245 CPU, NVIDIA RTX A5000 GPU, 128 GB Memory and 2 TB NVMe  
+	•	Three Aurora R16 desktop with Intel(R) Core(TM) 14th Gen i9 14900KF CPU, NVIDIA(R) GeForce RTX(TM) 4090, 64 GB Memory and 2 x 2TB M.2 PCIe SSD
+	•	One Alienware m18 laptop with Intel 13th Gen Intel Core i7 13700HX CPU, NVIDIA GeForce RTX 4060 8GB, 64 GB Memory and 2TB M.2 PCIe SSD
+	•	One Aurora R16 desktop with Intel(R) Core(TM) 14th Gen i9 14900KF CPU, NVIDIA(R) GeForce RTX(TM) 4060 8GB, 64 GB Memory and 1 TB NVMe SSD
+	•	OptiTrack Motion Capture system with 8 Flex13-Black-Long Pass cameras with capture volume of 24 × 24 × 8 feet and ~14 drones/robots/objects.
+	•	Two Intel RealSense D435i cameras, one Livox Mid-360 lidar Minimal Detection Range, One Hokuyo UST-10LX Scanning Laser Rangefinder and one Prusa MK4-kit 3D printer including extra Satin Sheet and Enclosure.
+	•	One Jetson Nano development kit, one NVIDIA Jetson AGX Orin 64GB developer kit and one Jetson Xavier NX development kit
+	•	Three MAX78000/MAX78002 Evaluation Kits and Three Discovery kits with STM32F746NG MCU
+	2.3.  Lab Space
+PI Hu’s lab is equipped with a heterogenous multi-robotic platform and computing resources to support the proposed research. PI Hu lab is equipped with around 800 sq ft lab space used for graduate student research activities and around 300 sq ft testing arena as depicted in Figure 2 equipped with OptiTrack Motion Capture system with 8 Flex13-Black-Long Pass cameras with capture volume of 24 × 24 × 8 feet and ~14 drones/robots/objects, for conducting experiments with the multi-robotic platform.
+
+Figure 2: Indoor Cage for Multi-robot Experiments 
