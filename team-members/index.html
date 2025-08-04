@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Team Members | Bin  Hu</title>
+    <meta name="author" content="Bin  Hu">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/uh.png">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://binhu85.github.io/team-members/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+        <!-- Nav Bar -->
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+          <div class="container">
+            <a class="navbar-brand title font-weight-lighter" href="/">
+                <img src="/assets/img/nail.jpg" alt="Site Logo" class="logo" style="height: 60px;">
+            </a>
+            <!-- Navbar Toggle -->
+            <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse text-right" id="navbarNav">
+              <ul class="navbar-nav ml-auto flex-nowrap">
+  
+                <!-- About -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="/">About</a>
+                </li>
+                
+  
+                <!-- Other pages -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="/publications/">Publications</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/teaching/">Teaching</a>
+                </li>
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NAIL LAB</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/team-members/">Team Members</a>
+                    <a class="dropdown-item" href="/resources/">Lab Resources</a>
+                    <a class="dropdown-item" href="/demonstrations/">Demonstrations</a>
+                    <a class="dropdown-item" href="/outreach/">Outreach</a>
+                  </div>
+                </li>
+  
+                <!-- Toogle theme mode -->
+                <li class="toggle-container">
+                  <button id="light-toggle" title="Change theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
+        <!-- Scrolling Progress Bar -->
+        <progress id="progress" value="0">
+          <div class="progress-container">
+            <span class="progress-bar"></span>
+          </div>
+        </progress>
+      </header>
+  
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <style>
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+  }
+  .member-grid:has(.member-card:only-child) {
+    justify-items: start;
+  }
+  .member-card {
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  .member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #dee2e6;
+    transition: border-color 0.3s ease;
+  }
+  .member-card:hover .member-photo {
+    border-color: #C8102E;
+  }
+  .member-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #C8102E;
+  }
+  .member-role {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .member-research {
+    font-size: 0.95em;
+    color: #007bff;
+    font-weight: 500;
+    background-color: #e3f2fd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .member-interests {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+  .funding-logos {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 1px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 1px;
+  }
+  .funding-logos img {
+    max-height: 100px;
+    max-width: 140px;
+    margin: 10px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .funding-logos img:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .funding-logos img {
+      max-height: 60px;
+      max-width: 100px;
+    }
+  }
+
+  .lab-director-card {
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .lab-director-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  .lab-director-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #dee2e6;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  .lab-director-card:hover .lab-director-photo {
+    border-color: #C8102E;
+  }
+  .lab-director-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .lab-director-name a {
+    color: #C8102E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .lab-director-name a:hover {
+    color: #A00D26;
+    text-decoration: underline;
+  }
+</style>
+
+<h2 id="networked-autonomous-intelligent-learning-nail">Networked Autonomous Intelligent Learning (NAIL)</h2>
+<hr>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    
+    
+    <li data-target="#myCarousel" data-slide-to="0" class="active">
+    
+    </li>
+<li data-target="#myCarousel" data-slide-to="1" class="">
+    
+    </li>
+<li data-target="#myCarousel" data-slide-to="2" class="">
+    
+    </li>
+<li data-target="#myCarousel" data-slide-to="3" class="">
+    
+    </li>
+<li data-target="#myCarousel" data-slide-to="4" class="">
+    
+  </li>
+</ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+      
+      <img src="/assets/img/lab/group.png" class="d-block w-100 carousel-image" alt="NAIL Group">
+      
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="carousel-item ">
+      
+      <img src="/assets/img/lab/event.jpg" class="d-block w-100 carousel-image" alt="Fortbend Event">
+      
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="carousel-item ">
+      
+      <img src="/assets/img/lab/facility.png" class="d-block w-100 carousel-image" alt="Lab Facility">
+      
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="carousel-item ">
+      
+      <img src="/assets/img/lab/seeker.png" class="d-block w-100 carousel-image" alt="Lab Facility">
+      
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="carousel-item ">
+      
+      <img src="/assets/img/lab/jackal.png" class="d-block w-100 carousel-image" alt="Lab Facility">
+      
+      <div class="carousel-caption">
+        <h4></h4>
+        <p></p>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<hr>
+<p>Welecome to NAIL Lab! The lab’s goal is to develop resilient and sustainable intelligent networked autonomous systems capable of operating in highly dynamic, uncertain, and adversarial environments. The lab integrates expertise in <strong>machine learning</strong>, <strong>control and optimization</strong>, <strong>wireless communication</strong>, and <strong>human factors</strong> to design advanced algorithms and practical testbeds for <strong>cyber-physical systems</strong>, <strong>human-AI autonomy</strong>, and the <strong>Internet of Things (IoT)</strong>.</p>
+
+<ul>
+  <li><strong>Vehicular Networked Control Systems</strong></li>
+  <li><strong>Embodied AI</strong></li>
+  <li><strong>Autonomous Robotic Systems</strong></li>
+  <li><strong>Smart Manufacturing Automation</strong></li>
+  <li><strong>Networked Power Systems and Smart Grids</strong></li>
+</ul>
+
+<hr>
+
+<h3 id="current-team-members">Current Team Members</h3>
+
+<div class="lab-director-card">
+  <img class="lab-director-photo" src="/assets/img/Hu_now.jpg" alt="Dr. Bin Hu">
+  <div class="lab-director-name"><a href="/">Dr. Bin Hu</a></div>
+  <div class="member-role">PI &amp; NAIL Lab Director</div>
+</div>
+
+<hr>
+<h5 id="phd-students"><strong>Ph.D. Students</strong></h5>
+<div class="member-grid">
+  
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/richie.jfif" alt="Richie Ryulie Suganda">
+    <div class="member-name">Richie Ryulie Suganda</div>
+    <div class="member-role">ECE (Spring 2024)</div>
+    <div class="member-research">Learning-based Control &amp; Optimization</div>
+    
+    <div class="member-interests">Safe Learning-enabled layered structured systems, LLM guided robotic systems</div>
+    
+  </div>
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/shaharyar.jpg" alt="Shaharyar Ahmed Khan Tareen">
+    <div class="member-name">Shaharyar Ahmed Khan Tareen</div>
+    <div class="member-role">ECE (Spring 2024)</div>
+    <div class="member-research">Robust Embodied AI</div>
+    
+    <div class="member-interests">Robust AI perception system for robotics, computer vision</div>
+    
+  </div>
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/benedictus.jfif" alt="Benedictus Christo Geroda Cinung">
+    <div class="member-name">Benedictus Christo Geroda Cinung</div>
+    <div class="member-role">ECE (Spring 2025)</div>
+    <div class="member-research">Machine Learning &amp; Robotics</div>
+    
+    <div class="member-interests">Safe reinforcement learning for quadruped robots</div>
+    
+  </div>
+  
+</div>
+
+<hr>
+
+<h5 id="master-students"><strong>Master Students</strong></h5>
+
+<div class="member-grid">
+  
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/tony.jpg" alt="Tony Tran">
+    <div class="member-name">Tony Tran</div>
+    <div class="member-role">Engineering Data Science (Fall 2024)</div>
+    <div class="member-research">Efficient Tiny ML &amp; Embedded AI</div>
+    
+    <div class="member-interests">Edge computing, model compression, IoT systems</div>
+    
+  </div>
+  
+</div>
+
+<hr>
+
+<h5 id="undergraduate-students"><strong>Undergraduate Students</strong></h5>
+
+<div class="member-grid">
+  
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/drone.jfif" alt="AI-powered Drone Project">
+    <div class="member-name">AI-powered Drone Project</div>
+    <div class="member-role">Team Project</div>
+    <div class="member-research">LLM based Drone Navigation and Control</div>
+    
+  </div>
+  
+  <div class="member-card">
+    <img class="member-photo" src="/assets/img/members/race.png" alt="AI-powered Race Car Project">
+    <div class="member-name">AI-powered Race Car Project</div>
+    <div class="member-role">Team Project</div>
+    <div class="member-research">Learning based Car Racing</div>
+    
+  </div>
+  
+</div>
+<hr>
+
+<h3 id="alumni">Alumni</h3>
+
+<h5 id="previous-master-students"><strong>Previous Master Students</strong></h5>
+<ul>
+  <li>
+<strong>Pooyan Ghodrati</strong> (2025, M.S. Engineering Data Science, RA funded by NASA at UH, now Data Scientist at Toyo Financial Group)</li>
+  <li>
+<strong>Jahanvi Hitesh Dave</strong> (2023, M.S. Computer Science, RA funded by NSF at UH, now at Goldman Sachs)</li>
+</ul>
+
+<h5 id="previous-undergraduate-students"><strong>Previous Undergraduate Students</strong></h5>
+<ul>
+  <li>
+<strong>Victor Le</strong> (2025, AI-powered Drone Project at UH)</li>
+  <li>
+<strong>Angel Gomez</strong> (2025, AI-powered Drone Project at UH)</li>
+  <li>
+<strong>Hieu Le</strong> (2025, AI-powered Drone Project at UH)</li>
+  <li>
+<strong>Nicolas Upshaw</strong> (2025, AI-powered Drone Project at UH)</li>
+  <li>
+<strong>Yosef Abushaaban</strong> (2025, AI-powered Race Car Project at UH)</li>
+  <li>
+<strong>Muhammad Ansari</strong> (2025, AI-powered Race Car Project at UH)</li>
+  <li>
+<strong>Damian Castillo</strong> (2025, AI-powered Race Car Project at UH)</li>
+  <li>
+<strong>Asaad Elsayed</strong> (2025, AI-powered Race Car Project at UH)</li>
+  <li>
+<strong>Alejandro Zamarron</strong> (2025, AI-powered Race Car Project at UH)</li>
+  <li>
+<strong>Javier Caudle</strong> (2024, Captone project-<em>Advance Surveillance Drone</em> at UH)</li>
+  <li>
+<strong>Steven Comayagua</strong> (2024, Captone project-<em>Advance Surveillance Drone</em> at UH)</li>
+  <li>
+<strong>Leandra Guzman</strong> (2024, Captone project-<em>Advance Surveillance Drone</em> at UH)</li>
+  <li>
+<strong>Weijie Huang</strong> (2024, Captone project-<em>Advance Surveillance Drone</em> at UH)</li>
+  <li>
+<strong>Edward Perez</strong> (2024, Captone project-<em>Advance Surveillance Drone</em> at UH)</li>
+  <li>
+<strong>Kristof Siska</strong> (2019–2022, RA funded by NSF, now Master’s student at Old Dominion University)</li>
+  <li>
+<strong>Jacob Michalick</strong> (2022, RA funded by DoD at ODU)</li>
+  <li>
+<strong>Skye Taylor</strong> (2021, RA funded by NSF REU, now Master’s student at University of Virginia)</li>
+  <li>
+<strong>Joshua Smith</strong> (2021, RA funded by NSF at ODU)</li>
+  <li>
+<strong>Andrew Vecerkauskas</strong> (2020, RA funded by ONR at ODU)</li>
+  <li>
+<strong>Jeremy Sklute</strong> (2020)</li>
+  <li>
+<strong>Teresa Trinh</strong> (2019, RA funded by ONR  at ODU)</li>
+  <li>
+<strong>Zachariah Garvin</strong> (2019, RA funded by ONR at ODU)</li>
+  <li>
+<strong>Thomas Sexton</strong> (2019, RA funded by ONR at ODU)</li>
+  <li>
+<strong>Bryan Holland</strong> (2019, RA funded by ONR at ODU)</li>
+  <li>
+<strong>Matthew Kersey</strong> (2019, RA funded by ONR at ODU)</li>
+  <li>
+<strong>Victor Ortiz</strong> (2018)</li>
+</ul>
+
+<hr>
+
+<h3 id="join-us">Join Us</h3>
+<p>We are always looking for talented and motivated individuals passionate about cutting-edge research in intelligent and networked autonomous systems. If you’re interested, please contact <strong>Dr. Bin Hu</strong> for opportunities.</p>
+
+<hr>
+
+<h3 id="acknowledgment">Acknowledgment</h3>
+<p>We gratefully acknowledge the support from our funding agencies, including the National Science Foundation (NSF), the National Aeronautics and Space Administration (NASA), and the Office of Naval Research (ONR), for enabling our research in intelligent and networked autonomous systems.</p>
+<div class="funding-logos">
+  <img src="/assets/img/nsf-logo.jfif" alt="NSF Logo">
+  <img src="/assets/img/nasa-logo.png" alt="NASA Logo">
+  <img src="/assets/img/onr-logo.png" alt="ONR Logo">
+</div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 Bin  Hu. Last updated: August 04, 2025.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05JTTNBX67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-05JTTNBX67');
+  </script>
+
+<!-- Default Statcounter code for UH-website
+https://binhu85.github.io/ -->
+<script type="text/javascript">
+  var sc_project=12859160; 
+  var sc_invisible=1; 
+  var sc_security="ba68d2bd"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="external nofollow noopener noopener noreferrer"><img class="statcounter" src="https://c.statcounter.com/12859160/0/ba68d2bd/1/" alt="Web Analytics" referrerpolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
