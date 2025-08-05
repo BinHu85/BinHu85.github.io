@@ -61,11 +61,12 @@ nav_order: 7
 .video-container {
   position: relative;
   width: 100%;
-  height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  margin-bottom: 1.25rem;
+  height: 0;
+  margin-bottom: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--global-bg-color);
 }
 
 .video-container iframe {
@@ -93,8 +94,9 @@ nav_order: 7
 }
 
 .featured-video {
+  grid-column: 1 / -1;
   max-width: 800px;
-  margin: 0 auto 3rem auto;
+  justify-self: center;
 }
 
 .featured-video .video-container {
@@ -120,50 +122,6 @@ nav_order: 7
 <div class="demo-container">
 
 <p>The NAIL Lab focuses on developing resilient and sustainable intelligent networked autonomous systems. Our demonstrations showcase real-world applications of our research in multi-agent systems, learning-based control, human-autonomy teaming, and safety-critical systems.</p>
-
-<hr>
-
-<div class="demo-section">
-<h2>🔬 Lab Equipment Capabilities</h2>
-
-<p>Demonstrations showcasing our AI-driven heterogenous robotic platforms and their autonomous capabilities in real-world scenarios.</p>
-
-<div class="video-grid">
-  <div class="video-card">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/lwVmqo9jDYw"  
-              title="Autonomous UAV Landing on Moving UGV | Multi-Robot Collaboration by NAIL Lab UH"
-              allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-title">Autonomous UAV Landing on Moving UGV | Multi-Robot Collaboration</div>
-    <div class="video-description">Demonstration of advanced multi-robot coordination where an autonomous UAV successfully lands on a moving ground vehicle, showcasing precise real-time control and inter-robot communication.</div>
-  </div>
-
-  <div class="video-card">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/rmnrWfe9tx8"  
-              title="ModalAI Seeker SLAM Drone Demo: Mapping, Motion Planning & Object Detection"
-              allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-title">ModalAI Seeker SLAM Drone Demo: Mapping, Motion Planning & Object Detection</div>
-    <div class="video-description">Live demonstration of our ModalAI Seeker drone performing simultaneous localization and mapping (SLAM), autonomous motion planning, and real-time object detection in complex environments.</div>
-  </div>
-
-  <div class="video-card">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/U8blNoet9O4"  
-              title="Fully Autonomous Jackal Robot Demo | SLAM, Obstacle Avoidance & Object Detection | NAIL Lab UH"
-              allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-title">Fully Autonomous Jackal Robot Demo | SLAM, Obstacle Avoidance & Object Detection</div>
-    <div class="video-description">Complete autonomous navigation demonstration featuring our Jackal robot performing SLAM, dynamic obstacle avoidance, and object detection in both indoor and outdoor environments.</div>
-  </div>
-</div>
-
-</div>
 
 <hr>
 
@@ -223,7 +181,7 @@ nav_order: 7
 <hr>
 
 <div class="demo-section">
-<h2>🎓 Student Research Projects</h2>
+<h2>🎓 Capstone Research Projects</h2>
 
 <p>Undergraduate and graduate student project demonstrations showcasing innovative applications and learning outcomes.</p>
 
@@ -237,6 +195,50 @@ nav_order: 7
     </div>
     <div class="video-title">UH Students Build Autonomous Drone with Real-Time Object Detection | NAIL Lab Capstone Project</div>
     <div class="video-description">Computer Engineering Technology undergraduates designed, assembled, and programmed this custom drone from scratch as their senior capstone project. Working under NAIL Lab guidance, the drone features autonomous navigation using OptiTrack motion capture and real-time onboard object detection—demonstrating hands-on robotics and AI development by UH students.</div>
+  </div>
+</div>
+
+</div>
+
+<hr>
+
+<div class="demo-section">
+<h2>🔬 Lab Equipment Demonstrations</h2>
+
+<p>Demonstrations showcasing our AI-driven heterogenous robotic platforms and their autonomous capabilities in real-world scenarios.</p>
+
+<div class="video-grid">
+  <div class="video-card">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/lwVmqo9jDYw"  
+              title="Autonomous UAV Landing on Moving UGV | Multi-Robot Collaboration by NAIL Lab UH"
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-title">Autonomous UAV Landing on Moving UGV | Multi-Robot Collaboration</div>
+    <div class="video-description">Demonstration of advanced multi-robot coordination where an autonomous UAV successfully lands on a moving ground vehicle, showcasing precise real-time control and inter-robot communication.</div>
+  </div>
+
+  <div class="video-card">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/rmnrWfe9tx8"  
+              title="ModalAI Seeker SLAM Drone Demo: Mapping, Motion Planning & Object Detection"
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-title">ModalAI Seeker SLAM Drone Demo: Mapping, Motion Planning & Object Detection</div>
+    <div class="video-description">Live demonstration of our ModalAI Seeker drone performing simultaneous localization and mapping (SLAM), autonomous motion planning, and real-time object detection in complex environments.</div>
+  </div>
+
+  <div class="video-card">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/U8blNoet9O4"  
+              title="Fully Autonomous Jackal Robot Demo | SLAM, Obstacle Avoidance & Object Detection | NAIL Lab UH"
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-title">Fully Autonomous Jackal Robot Demo | SLAM, Obstacle Avoidance & Object Detection</div>
+    <div class="video-description">Complete autonomous navigation demonstration featuring our Jackal robot performing SLAM, dynamic obstacle avoidance, and object detection in both indoor and outdoor environments.</div>
   </div>
 </div>
 
