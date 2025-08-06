@@ -10,10 +10,19 @@ nav_order: 4
 <style>
   .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
     justify-items: center;
-    align-items: start;
+    align-items: stretch;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .member-grid {
+      grid-template-columns: 1fr;
+      max-width: 320px;
+      gap: 20px;
+    }
   }
   .member-grid:has(.member-card:only-child) {
     justify-items: start;
@@ -22,54 +31,80 @@ nav_order: 4
     text-align: center;
     background: #f8f9fa;
     border-radius: 10px;
-    padding: 20px;
+    padding: 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .member-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   }
   .member-photo {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #dee2e6;
     transition: border-color 0.3s ease;
+    margin: 0 auto 18px auto;
+    display: block;
   }
   .member-card:hover .member-photo {
     border-color: #C8102E;
   }
   .member-name {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 8px;
     margin-bottom: 8px;
     color: #C8102E;
+    line-height: 1.3;
   }
   .member-role {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 500;
   }
   .member-research {
-    font-size: 0.95em;
+    font-size: 1.0em;
     color: #007bff;
     font-weight: 500;
     background-color: #e3f2fd;
-    padding: 8px 12px;
-    border-radius: 20px;
+    padding: 8px 14px;
+    border-radius: 18px;
     display: inline-block;
-    margin-top: 5px;
+    margin: 10px 0;
+    line-height: 1.3;
   }
   .member-interests {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #666;
     font-style: italic;
-    margin-top: 8px;
-    padding: 0 10px;
-    line-height: 1.4;
+    margin-top: auto;
+    padding: 12px 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  .member-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+    justify-content: space-between;
   }
   .funding-logos {
     text-align: center;
@@ -207,13 +242,15 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
   {% assign members = site.data.phd_members %}
   {% for member in members %}
   <div class="member-card">
-    <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
-    <div class="member-name">{{ member.name }}</div>
-    <div class="member-role">{{ member.role }}</div>
-    <div class="member-research">{{ member.research }}</div>
-    {% if member.interests %}
-    <div class="member-interests">{{ member.interests }}</div>
-    {% endif %}
+    <div class="member-card-content">
+      <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-role">{{ member.role }}</div>
+      <div class="member-research">{{ member.research }}</div>
+      {% if member.interests %}
+      <div class="member-interests">{{ member.interests }}</div>
+      {% endif %}
+    </div>
   </div>
   {% endfor %}
 </div>

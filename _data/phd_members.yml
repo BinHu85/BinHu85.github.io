@@ -1,15 +1,20 @@
 - name: Richie Ryulie Suganda
   role: ECE (Spring 2024)
   research: Learning-based Control & Optimization
-  interests: "Safe Learning-enabled layered structured systems, LLM guided robotic systems"
+  interests: "Developing safe learning algorithms for layered autonomous systems and integrating large language models for intelligent robotic control applications"
   photo: /assets/img/members/richie.jfif
 - name: Shaharyar Ahmed Khan Tareen
   role: ECE (Spring 2024)
   research: Robust Embodied AI  
-  interests: "Robust AI perception system for robotics, computer vision"
+  interests: "Advancing robust AI perception systems for autonomous robotics with focus on computer vision and environmental adaptation capabilities"
   photo: /assets/img/members/shaharyar.jpg
 - name: Benedictus Christo Geroda Cinung
   role: ECE (Spring 2025)
   research: Machine Learning & Robotics
-  interests: "Safe reinforcement learning for quadruped robots"
-  photo: /assets/img/members/benedictus.jfif 
+  interests: "Investigating safe reinforcement learning algorithms for quadruped robot locomotion and dynamic environment navigation systems"
+  photo: /assets/img/members/benedictus.jfif
+- name: Immanuel Raynaldo Santjoko
+  role: ECE (Fall 2025)
+  research: Trustworthy Human-AI Collaboration
+  interests: "Building reliable and transparent AI systems for effective human-AI collaboration through trust mechanisms and explainable AI frameworks"
+  photo: /assets/img/members/noel.jpeg 
