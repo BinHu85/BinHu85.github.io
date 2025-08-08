@@ -12,12 +12,12 @@ nav_order: 8
   {% if site.news != blank -%} 
   {%- assign news_size = site.news | size -%}
   <div class="table-responsive">
-    <table class="table table-sm table-borderless">
+    <table class="table table-sm table-borderless compact-news">
     {%- assign news = site.news | reverse -%}
     {% for item in news %} 
       <tr>
-        <th scope="row" style="min-width: 120px;">{{ item.date | date: "%b %-d, %Y" }}</th>
-        <td>
+        <th scope="row" style="min-width: 100px; width: 100px; font-size: 0.85rem; padding: 0.4rem 0.5rem;">{{ item.date | date: "%b %d, %y" }}</th>
+        <td style="font-size: 0.9rem; padding: 0.4rem 0.5rem; line-height: 1.3;">
           {% if item.inline -%} 
             {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
           {%- else -%} 
@@ -34,23 +34,27 @@ nav_order: 8
 </div>
 
 <style>
-.news table th {
+.compact-news th {
   font-weight: 500;
   color: var(--global-theme-color);
   border-right: 1px solid var(--global-divider-color);
-  padding-right: 1rem;
+  vertical-align: top;
 }
 
-.news table td {
-  padding-left: 1rem;
-  line-height: 1.5;
+.compact-news td {
+  border-left: 1px solid var(--global-divider-color-light);
+  padding-left: 0.8rem !important;
 }
 
-.news table tr {
-  border-bottom: 1px solid var(--global-divider-color-light);
+.compact-news tr {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.news table tr:hover {
+.compact-news tr:hover {
   background-color: var(--global-bg-color-light);
+}
+
+.compact-news tr:last-child {
+  border-bottom: none;
 }
 </style>
