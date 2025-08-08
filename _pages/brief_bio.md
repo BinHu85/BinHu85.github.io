@@ -2,7 +2,7 @@
 layout: page
 permalink: /brief-bio/
 title: Brief Bio
-description: Brief biographical information about Dr. Bin Hu
+description:
 nav: true
 nav_order: 1
 ---
