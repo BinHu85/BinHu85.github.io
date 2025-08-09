@@ -48,9 +48,11 @@ nav_order: 4
   .member-photo {
     width: 160px;
     height: 160px;
+    min-height: 160px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #dee2e6;
+    background-color: #f8f9fa;
     transition: border-color 0.3s ease;
     margin: 0 auto 18px auto;
     display: block;
@@ -148,9 +150,11 @@ nav_order: 4
   .lab-director-photo {
     width: 200px;
     height: 200px;
+    min-height: 200px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #dee2e6;
+    background-color: #f8f9fa;
     transition: border-color 0.3s ease;
     margin-bottom: 20px;
   }
