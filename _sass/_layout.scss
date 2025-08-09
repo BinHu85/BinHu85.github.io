@@ -12,9 +12,32 @@ body {
   }
 }
 
+// Aggressive layout shift prevention
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Pre-reserve navbar space immediately to prevent any jumping
+body {
+  padding-top: 0;
+}
+
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
+  // Reserve exact space for navbar before it loads
+  padding-top: 90px !important; // Increased to eliminate all jumping
+}
+
+// Force immediate layout reservation
+.container.mt-5 {
+  margin-top: 0 !important;
+  padding-top: 0 !important; // Let body padding handle all spacing
+  min-height: calc(100vh - 90px); // Reserve minimum page height
 }
 
 body.sticky-bottom-footer {

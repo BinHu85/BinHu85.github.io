@@ -142,6 +142,22 @@ blockquote {
   background-color: var(--global-bg-color);
   opacity: 0.95;
 }
+
+// Prevent navbar layout shift - apply immediately
+html.fixed-top-nav-ready body,
+body.fixed-top-nav {
+  padding-top: 90px !important;
+}
+
+.navbar.fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1030 !important;
+  will-change: auto !important; // Prevent unnecessary repaints
+  height: 76px; // Set explicit height to prevent size changes
+}
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
   border: 1px solid var(--global-divider-color);
