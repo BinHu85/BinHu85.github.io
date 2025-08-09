@@ -36,6 +36,19 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="canonical" href="https://binhu85.github.io/brief-bio/">
     
+    <!-- Prevent layout jumping by setting body class immediately -->
+    <script>
+      // Apply layout class immediately to prevent navbar jumping
+      document.documentElement.className += ' fixed-top-nav-ready';
+      if (document.body) {
+        document.body.className += ' fixed-top-nav';
+      } else {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.className += ' fixed-top-nav';
+        });
+      }
+    </script>
+
     <!-- Dark Mode -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">

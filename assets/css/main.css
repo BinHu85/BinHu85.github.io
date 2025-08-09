@@ -75,8 +75,28 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   scroll-margin-top: 66px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 0;
+}
+
 body.fixed-top-nav {
-  padding-top: 56px;
+  padding-top: 90px !important;
+}
+
+.container.mt-5 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  min-height: calc(100vh - 90px);
 }
 
 body.sticky-bottom-footer {
@@ -220,6 +240,21 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+}
+
+html.fixed-top-nav-ready body,
+body.fixed-top-nav {
+  padding-top: 90px !important;
+}
+
+.navbar.fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1030 !important;
+  will-change: auto !important;
+  height: 76px;
 }
 
 .navbar .dropdown-menu {
