@@ -89,6 +89,8 @@ body.sticky-bottom-footer {
 
 .profile img {
   width: 85%;
+  min-height: 200px;
+  background-color: #f8f9fa;
 }
 
 /******************************************************************************
@@ -522,6 +524,8 @@ footer.sticky-bottom {
   width: 95%;
   min-width: 80px;
   max-width: 200px;
+  min-height: 120px;
+  background-color: #f5f5f5;
 }
 .publications ol.bibliography li .abbr {
   height: 8rem;
