@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 body {
-  padding-bottom: 70px;
+  padding-bottom: 80px; // Minimal base padding for content visibility
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
@@ -18,9 +18,9 @@ html {
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  // Removed height: 100% to allow content to extend beyond viewport
 }
 
 // Pre-reserve navbar space immediately to prevent any jumping
@@ -31,18 +31,20 @@ body {
 body.fixed-top-nav {
   // Reserve exact space for navbar before it loads
   padding-top: 90px !important; // Increased to eliminate all jumping
+  // Add bottom padding for content visibility when footer is fixed
+  padding-bottom: 80px !important;
 }
 
 // Force immediate layout reservation
 .container.mt-5 {
   margin-top: 0 !important;
   padding-top: 0 !important; // Let body padding handle all spacing
-  min-height: calc(100vh - 90px); // Reserve minimum page height
+  // Removed min-height constraint to allow content to flow properly
 }
 
 body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
+  // Override: Keep bottom padding to ensure content visibility
+  padding-bottom: 80px !important;
 }
 
 .container {
