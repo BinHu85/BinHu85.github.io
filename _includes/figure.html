@@ -13,7 +13,7 @@
     {% endfor -%}
     {% endif %}
 
-    <!-- Fallback to the original file -->
+    <!-- Fallback to the original file with lazy loading -->
     <img 
       src="{{ include.path | relative_url }}"
       {% if include.class %}class="{{ include.class }}"{% endif %}  
@@ -26,6 +26,8 @@
       {% if include.alt %}alt="{{ include.alt }}"{% endif %} 
       {% if include.title %}title="{{ include.title }}"{% endif %} 
       {% if include.zoomable %}data-zoomable{% endif %}
+      loading="lazy"
+      decoding="async"
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     />
 
