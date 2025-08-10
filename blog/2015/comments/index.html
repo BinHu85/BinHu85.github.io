@@ -176,7 +176,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2025 Bin  Hu. Last updated: August 09, 2025.
+        © Copyright 2025 Bin  Hu. Last updated: August 10, 2025.
       </div>
     </footer>
 
@@ -307,5 +307,57 @@ https://binhu85.github.io/ -->
   }
 </script>
 
+    <!-- Dynamic spacing adjustment script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function adjustBottomPadding() {
+    // Get the last publication item
+    const publications = document.querySelectorAll('.publications ol.bibliography li');
+    if (publications.length === 0) return;
+    
+    const lastPublication = publications[publications.length - 1];
+    const lastPublicationRect = lastPublication.getBoundingClientRect();
+    const lastPublicationHeight = lastPublication.offsetHeight;
+    
+    // Calculate viewport height and current scroll position
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    
+    // Calculate ideal padding: enough to show full last publication + minimal breathing room
+    const idealPadding = Math.max(lastPublicationHeight + 20, 80);
+    
+    // Apply the calculated padding to body
+    document.body.style.paddingBottom = idealPadding + 'px';
+    
+    console.log('Dynamic spacing: Set bottom padding to', idealPadding + 'px');
+  }
+  
+  // Initial adjustment
+  adjustBottomPadding();
+  
+  // Re-adjust on window resize
+  window.addEventListener('resize', adjustBottomPadding);
+  
+  // Re-adjust when content changes (for dynamic content loading)
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'childList' && 
+          (mutation.target.classList.contains('publications') || 
+           mutation.target.closest('.publications'))) {
+        setTimeout(adjustBottomPadding, 100); // Small delay to ensure DOM is updated
+      }
+    });
+  });
+  
+  // Observe changes in publications section
+  const publicationsSection = document.querySelector('.publications');
+  if (publicationsSection) {
+    observer.observe(publicationsSection, {
+      childList: true,
+      subtree: true
+    });
+  }
+});
+</script>
   </body>
 </html>

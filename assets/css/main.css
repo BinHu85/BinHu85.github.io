@@ -67,7 +67,7 @@ html[data-theme=dark] .repo-img-dark {
  * Content
  ******************************************************************************/
 body {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 }
@@ -80,7 +80,6 @@ html {
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -91,16 +90,16 @@ body {
 
 body.fixed-top-nav {
   padding-top: 90px !important;
+  padding-bottom: 80px !important;
 }
 
 .container.mt-5 {
   margin-top: 0 !important;
   padding-top: 0 !important;
-  min-height: calc(100vh - 90px);
 }
 
 body.sticky-bottom-footer {
-  padding-bottom: 0;
+  padding-bottom: 80px !important;
 }
 
 .container {
