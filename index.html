@@ -151,8 +151,8 @@
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Hu_now-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/Hu_now.jpg" class="img-fluid z-dept-1 rounded-circle" width="auto" height="auto" alt="Hu_now.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/Hu_now.jpg" class="img-fluid z-dept-1 rounded-circle" width="auto" height="auto" alt="Hu_now.jpg" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -729,5 +729,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+    <!-- Simple image optimization - images are now compressed to reasonable sizes -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Preload critical images (profile picture) for instant display
+  const criticalImages = [
+    '/assets/img/Hu_now.jpg'
+  ];
+  
+  criticalImages.forEach(function(imageSrc) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imageSrc;
+    document.head.appendChild(link);
+  });
+});
+</script>
+
+<!-- Simple CSS for better image display -->
+<style>
+/* Reduce layout shift for images */
+img[width][height] {
+  height: auto;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.2s ease;
+}
+
+/* Optimize WebP images */
+.responsive-img-srcset {
+  object-fit: cover;
+}
+</style>
   </body>
 </html>

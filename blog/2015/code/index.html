@@ -399,5 +399,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+    <!-- Simple image optimization - images are now compressed to reasonable sizes -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Preload critical images (profile picture) for instant display
+  const criticalImages = [
+    '/assets/img/Hu_now.jpg'
+  ];
+  
+  criticalImages.forEach(function(imageSrc) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imageSrc;
+    document.head.appendChild(link);
+  });
+});
+</script>
+
+<!-- Simple CSS for better image display -->
+<style>
+/* Reduce layout shift for images */
+img[width][height] {
+  height: auto;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.2s ease;
+}
+
+/* Optimize WebP images */
+.responsive-img-srcset {
+  object-fit: cover;
+}
+</style>
   </body>
 </html>

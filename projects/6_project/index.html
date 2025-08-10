@@ -167,8 +167,8 @@ img: /assets/img/12.jpg
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -185,8 +185,8 @@ img: /assets/img/12.jpg
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -203,8 +203,8 @@ img: /assets/img/12.jpg
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -226,8 +226,8 @@ img: /assets/img/12.jpg
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -254,8 +254,8 @@ You describe how you toiled, sweated, <em>bled</em> for your project, and thenâ€
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -272,8 +272,8 @@ You describe how you toiled, sweated, <em>bled</em> for your project, and thenâ€
     <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
     
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <!-- Fallback to the original file with lazy loading -->
+    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" decoding="async" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -493,5 +493,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+    <!-- Simple image optimization - images are now compressed to reasonable sizes -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Preload critical images (profile picture) for instant display
+  const criticalImages = [
+    '/assets/img/Hu_now.jpg'
+  ];
+  
+  criticalImages.forEach(function(imageSrc) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imageSrc;
+    document.head.appendChild(link);
+  });
+});
+</script>
+
+<!-- Simple CSS for better image display -->
+<style>
+/* Reduce layout shift for images */
+img[width][height] {
+  height: auto;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.2s ease;
+}
+
+/* Optimize WebP images */
+.responsive-img-srcset {
+  object-fit: cover;
+}
+</style>
   </body>
 </html>
