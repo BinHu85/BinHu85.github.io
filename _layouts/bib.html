@@ -62,12 +62,12 @@
               {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
             {%- endif -%}
             {%- if author_is_self -%}
-              <em>{{author.first}} {{author.last}}</em>
+              <em>{{author.first}} {{author.last | replace: "★", "<sup>★</sup>" | replace: "♦", "<sup>♦</sup>"}}</em>
             {%- else -%}
               {%- if coauthor_url -%}
-                <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+                <a href="{{coauthor_url}}">{{author.first}} {{author.last | replace: "★", "<sup>★</sup>" | replace: "♦", "<sup>♦</sup>"}}</a>
               {%- else -%}
-                {{author.first}} {{author.last}}
+                {{author.first}} {{author.last | replace: "★", "<sup>★</sup>" | replace: "♦", "<sup>♦</sup>"}}
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
@@ -80,7 +80,8 @@
             {%- endif -%}
             {%- assign more_authors_show = '' -%}
             {%- for author in entry.author_array offset: author_array_limit -%}
-              {%- assign more_authors_show = more_authors_show | append: author.first | append: " " | append: author.last -%}
+              {%- assign author_name = author.first | append: " " | append: author.last | replace: "★", "<sup>★</sup>" | replace: "♦", "<sup>♦</sup>" -%}
+              {%- assign more_authors_show = more_authors_show | append: author_name -%}
               {%- unless forloop.last -%}
                 {%- assign more_authors_show = more_authors_show | append: ", " -%}
               {%- endunless -%}

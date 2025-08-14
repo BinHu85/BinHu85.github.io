@@ -44,6 +44,22 @@ blockquote {
   font-size: 1.2rem;
 }
 
+// Small star for student markers
+sup {
+  font-size: 0.6em;
+  vertical-align: super;
+  position: relative;
+  top: 0.1em;
+}
+
+// Smaller venue badges
+.badge {
+  font-size: 0.7rem !important;
+  padding: 0.2em 0.4em !important;
+  margin-top: 0.3rem;
+  display: inline-block;
+}
+
 // Math
 
 .equation {

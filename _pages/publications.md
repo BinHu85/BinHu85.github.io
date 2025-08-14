@@ -10,6 +10,10 @@ nav_order: 2
 <!-- _pages/publications.md -->
 <div class="publications">
 
+<p style="margin-bottom: 2rem; padding: 1rem; background-color: var(--global-card-bg-color); border-left: 4px solid var(--global-theme-color); border-radius: 4px;">
+<strong>Note:</strong> Names marked with ★ indicate my PhD students and ♦ indicate my Master's students.
+</p>
+
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
   {% bibliography -f hu -q @*[year={{y}}]* %}
