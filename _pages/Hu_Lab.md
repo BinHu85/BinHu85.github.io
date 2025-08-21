@@ -234,7 +234,9 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 ### Current Team Members
 
 <div class="lab-director-card">
-  <img class="lab-director-photo" src="/assets/img/Hu_now.jpg" alt="Dr. Bin Hu">
+  <a href="/">
+    <img class="lab-director-photo" src="/assets/img/Hu_now.jpg" alt="Dr. Bin Hu">
+  </a>
   <div class="lab-director-name"><a href="/">Dr. Bin Hu</a></div>
   <div class="member-role">PI & NAIL Lab Director</div>
 </div>
