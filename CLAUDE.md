@@ -45,8 +45,12 @@ bundle exec jekyll build --lsi
 # Deploy to GitHub Pages (manual deployment script)
 ./bin/deploy
 
-# Build for CI
+# Build for CI (used by GitHub Actions)
 ./bin/cibuild
+
+# Pre-commit hooks (linting and validation)
+pre-commit install
+pre-commit run --all-files
 ```
 
 ### GitHub Pages Deployment Process
@@ -79,14 +83,21 @@ git push origin main --force
 
 **Common Issues:**
 - Problematic demo posts with custom Liquid tags (`{% twitter %}`, `{% mermaid %}`)
-- Ruby gem conflicts (especially `uri` gem) - remove explicit uri dependency from Gemfile
+- Ruby gem conflicts (especially `uri` gem) - current Gemfile includes explicit uri dependency for compatibility
 - Build failures: Check GitHub Actions logs for specific error messages
 - Caching issues: Always try hard refresh before assuming build failed
 
 **Working Configuration:**
-- Use the original Gemfile and _config.yml that were working
+- Use the current Gemfile with explicit uri dependency (>= 0.10.1) for compatibility
+- Deployment workflow uses Ruby 3.0.2 while local development uses 3.1.2
 - Only remove problematic demo posts, don't modify gem dependencies unless necessary
 - Make incremental changes and test each one individually
+
+**Important Gems:**
+- `jekyll-scholar` for bibliography management
+- `jekyll-imagemagick` for automatic image optimization
+- `mini_racer` for JavaScript execution
+- `classifier-reborn` for LSI (Latent Semantic Indexing)
 
 ### Docker Commands
 ```bash
@@ -102,10 +113,12 @@ git push origin main --force
 
 - **Jekyll version**: ~4.3
 - **Theme**: al-folio (academic portfolio theme)
-- **Hosting**: GitHub Pages with automatic deployment
+- **Hosting**: GitHub Pages with GitHub Actions deployment workflow
+- **Ruby version**: 3.0.2 (GitHub Actions), 3.1.2 (local development)
 - **Bibliography**: Uses jekyll-scholar plugin with `hu.bib` file
 - **Analytics**: Google Analytics enabled
 - **Features**: Dark mode, math typesetting (MathJax), image optimization, social media integration
+- **Pre-commit hooks**: Enabled for trailing whitespace, YAML validation, and large file checks
 
 ## Content Management
 
@@ -188,7 +201,68 @@ The site now features a comprehensive NAIL LAB dropdown menu with the following 
 - Primary contact: bhu12@uh.edu (used throughout site for contact links)
 - All "contact us" links point to this email address
 
-### Development Environment
-- Ruby 3.1.2 with rbenv
-- Jekyll ~4.3 with al-folio theme
-- Local development: `bundle exec jekyll serve --lsi`
+## Development Environment
+
+### Local Setup
+- **Ruby**: 3.1.2 with rbenv (local), 3.0.2 (GitHub Actions)
+- **Jekyll**: ~4.3 with al-folio theme
+- **Node.js**: Required for mermaid.cli (GitHub Actions)
+
+### Development Workflow
+
+#### Complete Local Development Procedure
+**IMPORTANT**: Follow these exact steps to build the website locally:
+
+```bash
+# Step 1: Ensure correct Ruby version is active
+eval "$(rbenv init -)"
+ruby --version                  # Should show: ruby 3.1.2p20
+
+# Step 2: Install dependencies (first time or when Gemfile changes)
+eval "$(rbenv init -)" && bundle install
+
+# Step 3: Start local development server
+eval "$(rbenv init -)" && bundle exec jekyll serve --lsi
+
+# Server will be available at: http://127.0.0.1:4000
+# Build typically takes 3-4 seconds with image optimization
+# Auto-regeneration is enabled - changes reflect automatically
+```
+
+#### Troubleshooting Local Development
+If you encounter Ruby version issues:
+```bash
+# Check available Ruby versions
+rbenv versions
+
+# Ensure Ruby 3.1.2 is selected (should be automatic via .ruby-version)
+rbenv local 3.1.2
+
+# Verify rbenv is properly initialized
+eval "$(rbenv init -)"
+ruby --version
+which ruby                     # Should point to ~/.rbenv/shims/ruby
+```
+
+#### Daily Development Workflow
+```bash
+# Start development session
+eval "$(rbenv init -)" && bundle exec jekyll serve --lsi
+
+# Make changes to files
+# Website auto-regenerates on file changes
+
+# Before committing (optional)
+pre-commit run --all-files      # Runs linting and validation
+git add .
+git commit -m "Your message"
+git push origin main            # Triggers GitHub Actions deployment
+```
+
+### Testing Changes
+- **Local testing**: Server runs at http://127.0.0.1:4000 (not localhost:4000)
+- **Build time**: Expect 3-4 seconds for full build with image optimization
+- **Auto-regeneration**: Enabled - changes reflect automatically without restart
+- **Image processing**: ImageMagick automatically creates WebP versions at multiple resolutions
+- **Production testing**: Push to main branch and check GitHub Actions deployment
+- **Build validation**: Run `eval "$(rbenv init -)" && bundle exec jekyll build --lsi` to check for errors
