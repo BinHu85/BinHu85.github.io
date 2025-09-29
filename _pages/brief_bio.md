@@ -3,7 +3,7 @@ layout: page
 permalink: /brief-bio/
 title: Brief Bio
 description:
-nav: true
+nav: false
 nav_order: 1
 ---
 
