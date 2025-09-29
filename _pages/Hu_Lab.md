@@ -176,6 +176,27 @@ nav_order: 4
     color: #A00D26;
     text-decoration: underline;
   }
+
+  /* Custom carousel caption styling */
+  .carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    left: auto;
+    text-align: right;
+    background: none;
+    padding: 10px;
+    transform: none;
+    width: auto;
+  }
+  .carousel-caption h4,
+  .carousel-caption p {
+    color: white !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.7em;
+  }
 </style>
 
 

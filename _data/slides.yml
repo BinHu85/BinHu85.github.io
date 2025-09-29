@@ -1,25 +1,15 @@
   - type: image
+    url: "/assets/img/lab/group.jpg"
+    alt_text: NAIL Group Recent
+    title:
+    description:
+  - type: image
     url: "/assets/img/lab/group.png"
     alt_text: NAIL Group
-    title: 
-    description:
-  - type: image
-    url: "/assets/img/lab/event.jpg"
-    alt_text: Fortbend Event
-    title: 
-    description:
+    title:
+    description: Spring 2024
   - type: image
     url: "/assets/img/lab/facility.png"
-    alt_text: Lab Facility
-    title:
-    description:
-  - type: image
-    url: "/assets/img/lab/seeker.png"
-    alt_text: Lab Facility
-    title:
-    description:
-  - type: image
-    url: "/assets/img/lab/jackal.png"
     alt_text: Lab Facility
     title:
     description:
