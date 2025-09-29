@@ -337,7 +337,7 @@ nav_order: 6
 <div class="arena-showcase">
 <h2>🏟️ Testing Arena &amp; Lab Space</h2>
 
-<img src="/assets/img/facilities/testing_arena.png" alt="Multi-robot Testing Arena" class="arena-image">
+<img src="/assets/img/facilities/testing_arena.jpg" alt="Multi-robot Testing Arena" class="arena-image">
 
 <h3>Laboratory Specifications</h3>
 <div class="specs-list">
