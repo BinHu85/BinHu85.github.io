@@ -594,10 +594,16 @@ footer.sticky-bottom {
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
+          font-weight: bold;
+          font-size: 0.75rem;
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
+        }
+        // Keep emoji size larger
+        a.btn::before {
+          font-size: 0.9rem;
         }
         // Specific colors for different button types
         // Blue - Abstract
