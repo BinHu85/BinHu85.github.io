@@ -573,7 +573,10 @@ footer.sticky-bottom {
   min-width: 80px;
   max-width: 200px;
   min-height: 120px;
+  max-height: 120px;
   background-color: #f5f5f5;
+  object-fit: contain;
+  overflow: hidden;
 }
 .publications ol.bibliography li .abbr {
   height: 8rem;
@@ -633,6 +636,58 @@ footer.sticky-bottom {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
 }
+.publications ol.bibliography li .links a.abstract {
+  color: #007bff;
+  border-color: #007bff;
+}
+.publications ol.bibliography li .links a.abstract:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+.publications ol.bibliography li .links a.preview-btn {
+  color: #9c27b0;
+  border-color: #9c27b0;
+}
+.publications ol.bibliography li .links a.preview-btn:hover {
+  color: #7b1fa2;
+  border-color: #7b1fa2;
+}
+.publications ol.bibliography li .links a.btn[href*=pdf], .publications ol.bibliography li .links a.btn[href*=PDF] {
+  color: #C8102E;
+  border-color: #C8102E;
+}
+.publications ol.bibliography li .links a.btn[href*=pdf]:hover, .publications ol.bibliography li .links a.btn[href*=PDF]:hover {
+  color: #a00d25;
+  border-color: #a00d25;
+}
+.publications ol.bibliography li .links a.bibtex {
+  color: #000000;
+  border-color: #000000;
+}
+.publications ol.bibliography li .links a.bibtex:hover {
+  color: #333333;
+  border-color: #333333;
+}
+.publications ol.bibliography li .links a.btn[href*=arxiv],
+.publications ol.bibliography li .links a.btn[href*=github],
+.publications ol.bibliography li .links a.btn[role=button]:contains("Code"),
+.publications ol.bibliography li .links a.btn[role=button]:contains("Website"),
+.publications ol.bibliography li .links a.btn[role=button]:contains("HTML"),
+.publications ol.bibliography li .links a.btn[role=button]:contains("Poster"),
+.publications ol.bibliography li .links a.btn[role=button]:contains("Slides") {
+  color: #fd7e14;
+  border-color: #fd7e14;
+}
+.publications ol.bibliography li .links a.btn[href*=arxiv]:hover,
+.publications ol.bibliography li .links a.btn[href*=github]:hover,
+.publications ol.bibliography li .links a.btn[role=button]:contains("Code"):hover,
+.publications ol.bibliography li .links a.btn[role=button]:contains("Website"):hover,
+.publications ol.bibliography li .links a.btn[role=button]:contains("HTML"):hover,
+.publications ol.bibliography li .links a.btn[role=button]:contains("Poster"):hover,
+.publications ol.bibliography li .links a.btn[role=button]:contains("Slides"):hover {
+  color: #e8590c;
+  border-color: #e8590c;
+}
 .publications ol.bibliography li .hidden {
   font-size: 0.875rem;
   max-height: 0px;
@@ -666,6 +721,26 @@ footer.sticky-bottom {
 }
 .publications ol.bibliography li div.abstract.hidden.open {
   border-color: var(--global-text-color);
+}
+.publications ol.bibliography li div.preview-expanded.hidden {
+  border: solid 1px var(--global-divider-color);
+  background-color: var(--global-bg-color);
+}
+.publications ol.bibliography li div.preview-expanded.hidden .preview-modal-content {
+  padding: 1rem;
+  text-align: center;
+}
+.publications ol.bibliography li div.preview-expanded.hidden .preview-modal-content img {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.publications ol.bibliography li div.preview-expanded.hidden.open {
+  border-color: var(--global-theme-color);
 }
 
 figure.highlight {
