@@ -141,6 +141,9 @@
           {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
           {%- endif %}
+          {%- if entry.preview %}
+            <a class="preview-btn btn btn-sm z-depth-0" role="button">Graph Abstract</a>
+          {%- endif %}
           {%- if entry.arxiv %}
             <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
@@ -205,5 +208,18 @@
             {% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
           </div>
           {%- endif %}
+
+          {%- if entry.preview -%}
+          <!-- Hidden expanded preview block -->
+          <div class="preview-expanded hidden">
+            <div class="preview-modal-content">
+              {% if entry.preview contains '://' -%}
+              <img src="{{ entry.preview }}" alt="Publication preview"/>
+              {%- else -%}
+              <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Publication preview"/>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- endif -%}
         </div>
       </div>
