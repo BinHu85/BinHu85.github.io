@@ -3,6 +3,13 @@
   research: Learning-based Control & Optimization
   interests: "Developing safe learning algorithms for layered autonomous systems and integrating large language models for intelligent robotic control applications"
   photo: /assets/img/members/richie.jfif
+- name: Shaharyar Ahmed Khan Tareen
+  role: ECE (Spring 2024)
+  research: Machine Learning & TinyML
+  interests: "Developing efficient neural architecture search algorithms and robust training methods for edge AI and embedded systems"
+  photo: /assets/img/members/shaharyar.jpg
+  co_advisor: "Co-advised with Dr. Xiaojing Yuan"
+  co_advisor_link: https://www.et.uh.edu/faculty/yuan-xiaojing
 - name: Benedictus Christo Geroda Cinun
   role: ECE (Spring 2025)
   research: Machine Learning & Robotics
