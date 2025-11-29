@@ -526,21 +526,21 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      min-height: 120px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
       .preview {
-        width: 95%;
-        min-width: 80px;
-        max-width: 200px;
-        min-height: 120px;
-        max-height: 120px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
         background-color: #f5f5f5;
         object-fit: contain;
         overflow: hidden;
+        border-radius: 4px;
       }
       .abbr {
-        height: 8rem;
+        min-height: 8rem;
         margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
