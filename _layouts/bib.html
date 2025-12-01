@@ -217,10 +217,18 @@
           <!-- Hidden expanded preview block -->
           <div class="preview-expanded hidden">
             <div class="preview-modal-content">
-              {% if entry.preview contains '://' -%}
-              <img src="{{ entry.preview }}" alt="Publication preview"/>
+              {% if entry.graph -%}
+                {%- if entry.graph contains '://' -%}
+                <img src="{{ entry.graph }}" alt="Publication preview"/>
+                {%- else -%}
+                <img src="{{ entry.graph | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Publication preview"/>
+                {%- endif -%}
               {%- else -%}
-              <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Publication preview"/>
+                {%- if entry.preview contains '://' -%}
+                <img src="{{ entry.preview }}" alt="Publication preview"/>
+                {%- else -%}
+                <img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="Publication preview"/>
+                {%- endif -%}
               {%- endif -%}
             </div>
           </div>
