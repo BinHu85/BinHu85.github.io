@@ -101,6 +101,32 @@ nav_order: 4
     border-radius: 10px;
     margin-top: 15px;
   }
+  .member-publications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .pub-badge {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pub-badge:hover {
+    background: linear-gradient(135deg, #A00D26 0%, #6B0000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #fff;
+    text-decoration: none;
+  }
   .member-card-content {
     display: flex;
     flex-direction: column;
@@ -296,6 +322,13 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
       </div>
       {% endif %}
       <div class="member-research">{{ member.research }}</div>
+      {% if member.publications %}
+      <div class="member-publications">
+        {% for pub in member.publications %}
+        <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" class="pub-badge">{{ pub.venue }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
       {% if member.interests %}
       <div class="member-interests">{{ member.interests }}</div>
       {% endif %}
@@ -312,13 +345,22 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
   {% assign members = site.data.master_members %}
   {% for member in members %}
   <div class="member-card">
-    <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
-    <div class="member-name">{{ member.name }}</div>
-    <div class="member-role">{{ member.role }}</div>
-    <div class="member-research">{{ member.research }}</div>
-    {% if member.interests %}
-    <div class="member-interests">{{ member.interests }}</div>
-    {% endif %}
+    <div class="member-card-content">
+      <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-role">{{ member.role }}</div>
+      <div class="member-research">{{ member.research }}</div>
+      {% if member.publications %}
+      <div class="member-publications">
+        {% for pub in member.publications %}
+        <a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer" class="pub-badge">{{ pub.venue }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if member.interests %}
+      <div class="member-interests">{{ member.interests }}</div>
+      {% endif %}
+    </div>
   </div>
   {% endfor %}
 </div>

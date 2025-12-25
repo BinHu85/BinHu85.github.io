@@ -3,3 +3,10 @@
   research: Efficient Tiny ML & Embedded AI
   interests: "Edge computing, model compression, IoT systems"
   photo: /assets/img/members/tony.jpg
+  publications:
+    - venue: "WACV-WS2026"
+      url: "https://arxiv.org/pdf/2512.20746"
+    - venue: "ICRA2025"
+      url: "https://nail-uh.github.io/icra25.github.io/"
+    - venue: "ICRA-LBS2025"
+      url: "https://www.youtube.com/watch?v=jgrmN9YZ8vA"
