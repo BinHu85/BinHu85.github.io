@@ -229,6 +229,32 @@
     border-radius: 10px;
     margin-top: 15px;
   }
+  .member-publications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .pub-badge {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pub-badge:hover {
+    background: linear-gradient(135deg, #A00D26 0%, #6B0000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #fff;
+    text-decoration: none;
+  }
   .member-card-content {
     display: flex;
     flex-direction: column;
@@ -431,6 +457,15 @@
       
       <div class="member-research">Learning-based Control &amp; Optimization</div>
       
+      <div class="member-publications">
+        
+        <a href="https://nail-uh.github.io/icra25.github.io/" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">ICRA2025</a>
+        
+        <a href="https://www.youtube.com/watch?v=uHh0LyTN1c0" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">ICRA-LBS2025</a>
+        
+      </div>
+      
+      
       <div class="member-interests">Developing safe learning algorithms for layered autonomous systems and integrating large language models for intelligent robotic control applications</div>
       
     </div>
@@ -455,6 +490,13 @@
       
       <div class="member-research">Machine Learning &amp; TinyML</div>
       
+      <div class="member-publications">
+        
+        <a href="https://saktx.github.io/solar.github.io/" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">WACV2026</a>
+        
+      </div>
+      
+      
       <div class="member-interests">Developing efficient neural architecture search algorithms and robust training methods for edge AI and embedded systems</div>
       
     </div>
@@ -472,6 +514,7 @@
       <div class="member-role">ECE (Spring 2025)</div>
       
       <div class="member-research">Machine Learning &amp; Robotics</div>
+      
       
       <div class="member-interests">Investigating safe reinforcement learning algorithms for quadruped robot locomotion and dynamic environment navigation systems</div>
       
@@ -497,6 +540,7 @@
       
       <div class="member-research">Trustworthy Human-AI Collaboration</div>
       
+      
       <div class="member-interests">Building reliable and transparent AI systems for effective human-AI collaboration through trust mechanisms and explainable AI frameworks</div>
       
     </div>
@@ -512,13 +556,26 @@
   
   
   <div class="member-card">
-    <img class="member-photo" src="/assets/img/members/tony.jpg" alt="Tony Tran">
-    <div class="member-name">Tony Tran</div>
-    <div class="member-role">Engineering Data Science (Fall 2024)</div>
-    <div class="member-research">Efficient Tiny ML &amp; Embedded AI</div>
-    
-    <div class="member-interests">Edge computing, model compression, IoT systems</div>
-    
+    <div class="member-card-content">
+      <img class="member-photo" src="/assets/img/members/tony.jpg" alt="Tony Tran">
+      <div class="member-name">Tony Tran</div>
+      <div class="member-role">Engineering Data Science (Fall 2024)</div>
+      <div class="member-research">Efficient Tiny ML &amp; Embedded AI</div>
+      
+      <div class="member-publications">
+        
+        <a href="https://arxiv.org/pdf/2512.20746" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">WACV-WS2026</a>
+        
+        <a href="https://nail-uh.github.io/icra25.github.io/" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">ICRA2025</a>
+        
+        <a href="https://www.youtube.com/watch?v=jgrmN9YZ8vA" target="_blank" rel="noopener noreferrer noopener noreferrer" class="pub-badge">ICRA-LBS2025</a>
+        
+      </div>
+      
+      
+      <div class="member-interests">Edge computing, model compression, IoT systems</div>
+      
+    </div>
   </div>
   
 </div>
