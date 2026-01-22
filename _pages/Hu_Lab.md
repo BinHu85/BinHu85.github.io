@@ -346,8 +346,21 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
   {% for member in members %}
   <div class="member-card">
     <div class="member-card-content">
+      {% if member.website %}
+      <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer">
+        <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
+      </a>
+      {% else %}
       <img class="member-photo" src="{{ member.photo }}" alt="{{ member.name }}">
-      <div class="member-name">{{ member.name }}</div>
+      {% endif %}
+      <div class="member-name">
+        {{ member.name }}
+        {% if member.website %}
+        <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; color: #007bff; text-decoration: none;">
+          <i class="fas fa-globe" title="Visit personal website"></i>
+        </a>
+        {% endif %}
+      </div>
       <div class="member-role">{{ member.role }}</div>
       <div class="member-research">{{ member.research }}</div>
       {% if member.publications %}
