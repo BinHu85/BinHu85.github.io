@@ -4,4 +4,4 @@ date: 2026-01-27
 inline: true
 ---
 
-:tada: Our paper [End-to-End Design and Validation of a Low-Cost Stewart Platform with Nonlinear Estimation and Control](https://arxiv.org/abs/2510.22949) has been accepted to *Advanced Control for Applications*. Congratulations to **Benedictus Cinun** and all co-authors!
+:tada: Our paper [End-to-End Design and Validation of a Low-Cost Stewart Platform With Nonlinear Estimation and Control](https://doi.org/10.1002/adc2.70050) has been published in *Advanced Control for Applications: Engineering and Industrial Systems*, Vol. 8, No. 1, 2026. Congratulations to **Benedictus Cinun** and all co-authors!
