@@ -325,7 +325,20 @@
           <div class="author">
           
 
-          Timothy Bautista, Fengyu Wang, Advika Govindarajan, Liang Sun, Jing Chen, <em>Bin Hu</em>, Michael S Politowicz, and Eric T Chancey</div>
+          Timothy Bautista, Fengyu Wang, Advika Govindarajan, Liang Sun, Yining "Elena" Zhang, Jing Chen, Richie R. Suganda<sup>★</sup>, <em>Bin Hu</em>, and
+            <span class="more-authors" title="click to view 2 more authors" onclick="
+                  var element = $(this);
+                  element.attr('title', '');
+                  var more_authors_text = element.text() == '2 more authors' ? 'Michael S. Politowicz, Eric T. Chancey' : '2 more authors';
+                  var cursorPosition = 0;
+                  var textAdder = setInterval(function(){
+                    element.text(more_authors_text.substring(0, cursorPosition + 1));
+                    if (++cursorPosition == more_authors_text.length){
+                      clearInterval(textAdder);
+                    }
+                }, '10');
+                ">2 more authors</span>
+</div>
 
           <!-- Journal/Book title and date -->
           
@@ -342,7 +355,7 @@
           <div class="bibtex hidden">
             <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">bautista2026high</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{A High-Fidelity 3D Simulation Environment for Multi-Aircraft Operations}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bautista, Timothy and Wang, Fengyu and Govindarajan, Advika and Sun, Liang and Chen, Jing and Hu, Bin and Politowicz, Michael S and Chancey, Eric T}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bautista, Timothy and Wang, Fengyu and Govindarajan, Advika and Sun, Liang and Zhang, Yining "Elena" and Chen, Jing and Suganda★, Richie R. and Hu, Bin and Politowicz, Michael S. and Chancey, Eric T.}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{AIAA SCITECH 2026 Forum}</span><span class="p">,</span>
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{2211}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
@@ -2940,7 +2953,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2026 Bin  Hu. Last updated: February 23, 2026.
+        © Copyright 2026 Bin  Hu. Last updated: February 24, 2026.
       </div>
     </footer>
 
