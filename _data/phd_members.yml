@@ -4,6 +4,8 @@
   interests: "Developing safe learning algorithms for layered autonomous systems and integrating large language models for intelligent robotic control applications"
   photo: /assets/img/members/richie.jfif
   publications:
+    - venue: "AIAA2026"
+      url: "https://arc.aiaa.org/doi/abs/10.2514/6.2026-2211"
     - venue: "ICRA2025"
       url: "https://nail-uh.github.io/icra25.github.io/"
     - venue: "ICRA-LBS2025"
