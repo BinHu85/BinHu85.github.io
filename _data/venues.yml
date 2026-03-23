@@ -8,3 +8,7 @@
 "ACAP":
   url: https://onlinelibrary.wiley.com/journal/25780727
   color: "#00529B"
+
+"TC":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12
+  color: "#004D7F"
