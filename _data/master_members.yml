@@ -5,6 +5,8 @@
   photo: /assets/img/members/tony.jpg
   website: https://tonyvt0.github.io/
   publications:
+    - venue: "IEEE TC2026"
+      url: "https://nail-uh.github.io/elastic.github.io/"
     - venue: "WACV-WS2026"
       url: "https://arxiv.org/pdf/2512.20746"
     - venue: "ICRA2025"
