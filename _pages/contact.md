@@ -161,7 +161,7 @@ nav_order: 7
     </div>
     <div class="contact-details">
       <h3>NAIL Lab Address</h3>
-      <p>Engineering Building 4 (SAB2), Room 122<br>
+      <p>Engineering Building 4 (SAB2), Room 111<br>
       University of Houston Sugar Land<br>
       13850 University Blvd<br>
       Sugar Land, TX 77479</p>
