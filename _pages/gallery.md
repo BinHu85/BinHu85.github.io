@@ -188,9 +188,9 @@ nav_order: 8
   </div>
 
   <div class="photo-card">
-    <img src="{{ '/assets/img/gallery/2023_spring.jpeg' | relative_url }}" alt="Spring 2023 Group Dinner" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+    <img src="{{ '/assets/img/gallery/2023_fall.jpeg' | relative_url }}" alt="Fall 2023 Group Dinner" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
     <div class="photo-caption">
-      <h4>Spring 2023</h4>
+      <h4>Fall 2023</h4>
       <p>Lab group gathering</p>
     </div>
   </div>
