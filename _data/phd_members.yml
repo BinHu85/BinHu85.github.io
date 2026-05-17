@@ -10,16 +10,6 @@
       url: "https://nail-uh.github.io/icra25.github.io/"
     - venue: "ICRA-LBS2025"
       url: "https://www.youtube.com/watch?v=uHh0LyTN1c0"
-- name: Shaharyar Ahmed Khan Tareen
-  role: ECE (Spring 2024)
-  research: Machine Learning & TinyML
-  interests: "Developing efficient neural architecture search algorithms and robust training methods for edge AI and embedded systems"
-  photo: /assets/img/members/shaharyar.jpg
-  co_advisor: "Co-advised with Dr. Xiaojing Yuan"
-  co_advisor_link: https://www.et.uh.edu/faculty/yuan-xiaojing
-  publications:
-    - venue: "WACV2026"
-      url: "https://saktx.github.io/solar.github.io/"
 - name: Benedictus Christo Geroda Cinun
   role: ECE (Spring 2025)
   research: Machine Learning & Robotics

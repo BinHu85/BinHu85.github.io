@@ -65,6 +65,13 @@ nav_order: 8
   display: block;
 }
 
+.photo-card.defense-photo img {
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+}
+
 .photo-card .photo-caption {
   padding: 1rem;
   text-align: center;
@@ -164,6 +171,14 @@ nav_order: 8
 
 <div class="photo-grid">
   <div class="photo-card">
+    <img src="{{ '/assets/img/gallery/2026_spring.jpeg' | relative_url }}" alt="Spring 2026 NAIL Group Lunch" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+    <div class="photo-caption">
+      <h4>Spring 2026</h4>
+      <p>NAIL group lunch celebrating a successful semester and Tony's graduation</p>
+    </div>
+  </div>
+
+  <div class="photo-card">
     <img src="{{ '/assets/img/gallery/2025_fall.jpeg' | relative_url }}" alt="Fall 2025 Group Dinner" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
     <div class="photo-caption">
       <h4>Fall 2025</h4>
@@ -192,6 +207,21 @@ nav_order: 8
     <div class="photo-caption">
       <h4>Fall 2023</h4>
       <p>Lab group gathering</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="gallery-section">
+<h2>Master and PhD Student Defenses</h2>
+<p>Milestone moments from NAIL Lab thesis and dissertation defenses.</p>
+
+<div class="photo-grid">
+  <div class="photo-card defense-photo">
+    <img src="{{ '/assets/img/gallery/defenses/tony_tran_ms_2026.jpeg' | relative_url }}" alt="Tony Tran M.S. Defense — Spring 2026" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+    <div class="photo-caption">
+      <h4>Tony Tran — M.S. Defense</h4>
+      <p>Spring 2026 — Efficient Iterative Neural Architecture Search for Object Detection on IoT Devices</p>
     </div>
   </div>
 </div>

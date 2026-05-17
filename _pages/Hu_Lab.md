@@ -401,6 +401,7 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 ### Alumni
 
 ##### **Previous Master Students**
+- **Tony Tran** (2026, M.S. Engineering Data Science at UH, now 💼 <strong style="color: #C8102E;">Machine Learning Engineer at <a href="https://www.cfd-research.com" style="color: #C8102E;">CFD Research Corporation</a></strong>)
 - **Pooyan Ghodrati** (2025, M.S. Engineering Data Science, RA funded by NASA at UH, now Data Scientist at Toyo Financial Group)
 - **Jahanvi Hitesh Dave** (2023, M.S. Computer Science, RA funded by NSF at UH, now at Goldman Sachs)
 

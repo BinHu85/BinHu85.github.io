@@ -1,4 +1,9 @@
   - type: image
+    url: "/assets/img/lab/group_2026.jpeg"
+    alt_text: NAIL Group Lunch Spring 2026
+    title:
+    description: NAIL Group Lunch — Celebrating Spring 2026 and Tony's Graduation
+  - type: image
     url: "/assets/img/lab/group.jpg"
     alt_text: NAIL Group Recent
     title:
