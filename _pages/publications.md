@@ -11,7 +11,7 @@ nav_order: 2
 <div class="publications">
 
 <p style="margin-bottom: 2rem; padding: 1rem; background-color: var(--global-card-bg-color); border-left: 4px solid var(--global-theme-color); border-radius: 4px;">
-<strong>Note:</strong> Names marked with ★ indicate my PhD students and ♦ indicate my Master's students.
+<strong>Note:</strong> Names marked with ★ indicate my PhD students, ♦ indicate my Master's students, and † indicates equal contribution.
 </p>
 
 {%- for y in page.years %}
