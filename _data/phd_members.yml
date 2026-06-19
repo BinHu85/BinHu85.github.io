@@ -16,6 +16,7 @@
   research: Machine Learning & Robotics
   interests: "Investigating safe reinforcement learning algorithms for quadruped robot locomotion and dynamic environment navigation systems"
   photo: /assets/img/members/benedictus.jfif
+  website: https://bentuschristo.github.io/
   publications:
     - venue: "ACAP2026"
       url: "https://onlinelibrary.wiley.com/doi/10.1002/adc2.70050"
