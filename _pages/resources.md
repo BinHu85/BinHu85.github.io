@@ -277,6 +277,12 @@ nav_order: 6
   </div>
 
   <div class="equipment-card">
+    <img src="/assets/img/facilities/ai_server.png" alt="Custom AI Server" class="equipment-image">
+    <div class="equipment-title">Custom AI Server</div>
+    <div class="equipment-description">In-house server for large-scale training and inference, housing the four RTX PRO 6000 GPUs above. Ryzen Threadripper 9975WX (32C/64T), 192GB DDR5-6400, and a 4TB Crucial T705 NVMe SSD.</div>
+  </div>
+
+  <div class="equipment-card">
     <img src="/assets/img/facilities/jetson_xavier.jpg" alt="NVIDIA Jetson Xavier NX" class="equipment-image">
     <div class="equipment-title">NVIDIA Jetson Xavier NX</div>
     <div class="equipment-description">Compact AI computing platform delivering 21 TOPS of accelerated computing in a small form factor for edge AI applications.</div>
