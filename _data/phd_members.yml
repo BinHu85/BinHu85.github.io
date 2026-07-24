@@ -5,6 +5,10 @@
   photo: /assets/img/members/richie.jfif
   website: https://richieryu.github.io/
   publications:
+    - venue: "IROS2026"
+      url: "https://nail-uh.github.io/iros2026.github.io/"
+    - venue: "RA-L2026"
+      url: "https://www.youtube.com/watch?v=KVUX0SVO-dA"
     - venue: "AIAA2026"
       url: "https://arc.aiaa.org/doi/abs/10.2514/6.2026-2211"
     - venue: "ICRA2025"
@@ -29,3 +33,8 @@
   publications:
     - venue: "ACAP2026"
       url: "https://onlinelibrary.wiley.com/doi/10.1002/adc2.70050"
+- name: Vieri Akustia
+  role: ECE (Fall 2026)
+  research: Efficient Embodied AI
+  interests: "Developing energy-efficient foundation models for embodied AI, enabling real-time perception and control on resource-constrained edge devices and robotic platforms"
+  photo: /assets/img/members/vieri.jpeg

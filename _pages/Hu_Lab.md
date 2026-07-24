@@ -401,8 +401,33 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
 ### Alumni
 
 ##### **Previous Master Students**
-- **Tony Tran** (2026, M.S. Engineering Data Science at UH, now 💼 <strong style="color: #C8102E;">Machine Learning Engineer at <a href="https://www.cfd-research.com" style="color: #C8102E;">CFD Research Corporation</a></strong>)
-- **Pooyan Ghodrati** (2025, M.S. Engineering Data Science, RA funded by NASA at UH, now Data Scientist at Toyo Financial Group)
+
+<div class="member-grid">
+  <div class="member-card">
+    <div class="member-card-content">
+      <a href="https://tonyvt0.github.io/" target="_blank" rel="noopener noreferrer">
+        <img class="member-photo" src="/assets/img/members/tony.jpg" alt="Tony Tran">
+      </a>
+      <div class="member-name">
+        Tony Tran
+        <a href="https://tonyvt0.github.io/" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; color: #007bff; text-decoration: none;">
+          <i class="fas fa-globe" title="Visit personal website"></i>
+        </a>
+      </div>
+      <div class="member-role">2026, M.S. Engineering Data Science</div>
+      <div class="member-research">Now: Machine Learning Engineer at <a href="https://www.cfd-research.com" target="_blank" rel="noopener noreferrer">CFD Research Corporation</a></div>
+    </div>
+  </div>
+  <div class="member-card">
+    <div class="member-card-content">
+      <img class="member-photo" src="/assets/img/members/pooyan.jfif" alt="Pooyan Ghodrati">
+      <div class="member-name">Pooyan Ghodrati</div>
+      <div class="member-role">2025, M.S. Engineering Data Science (RA funded by NASA)</div>
+      <div class="member-research">Now: Data Scientist at Toyo Financial Group</div>
+    </div>
+  </div>
+</div>
+
 - **Jahanvi Hitesh Dave** (2023, M.S. Computer Science, RA funded by NSF at UH, now at Goldman Sachs)
 
 ##### **Previous Undergraduate Students**
