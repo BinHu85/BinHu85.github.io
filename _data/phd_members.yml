@@ -5,8 +5,12 @@
   photo: /assets/img/members/richie.jfif
   website: https://richieryu.github.io/
   publications:
+    - venue: "CoRL2026"
+      url: "/publications/#suganda2026adaptive"
     - venue: "IROS2026"
       url: "https://nail-uh.github.io/iros2026.github.io/"
+    - venue: "IROS-LBS2026"
+      url: "https://nail-uh.github.io/3d-leader-follower-cbf.github.io/"
     - venue: "RA-L2026"
       url: "https://www.youtube.com/watch?v=KVUX0SVO-dA"
     - venue: "AIAA2026"
@@ -31,6 +35,8 @@
   photo: /assets/img/members/noel.jpeg
   website: https://research.noelsadventure.my.id/
   publications:
+    - venue: "IROS-LBS2026"
+      url: "https://nail-uh.github.io/3d-leader-follower-cbf.github.io/"
     - venue: "ACAP2026"
       url: "https://onlinelibrary.wiley.com/doi/10.1002/adc2.70050"
 - name: Vieri Akustia
