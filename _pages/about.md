@@ -17,7 +17,7 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Dr. Bin Hu directs the Networked Autonomous and Intelligent Learning (NAIL) Lab. The NAIL Lab focuses on cutting-edge research in learning-based control, optimization, and machine learning, with applications spanning cybersecurity, autonomous robotics, human-machine automation, IoT systems, and vehicular networks. Our lab develops intelligent autonomous systems that can learn, adapt, and operate safely in complex, dynamic environments.
+Dr. Bin Hu is an Assistant Professor at the University of Houston and director of the Networked Autonomous and Intelligent Learning (NAIL) Lab. His research focuses on safe and trustworthy autonomy, learning-based control, robotics, and machine learning, with applications in autonomous robotics, spacecraft autonomy, multi-robot systems, and edge AI. He is a recipient of the **NASA Early Career Faculty (ECF25) Award** and the **2026 NVIDIA Academic Grant Program Award**.
 
 Learn more about our [NAIL Lab team](/team-members/), [facilities](/resources/), [research demonstrations](/demonstrations/), and [outreach activities](/outreach/).
 
