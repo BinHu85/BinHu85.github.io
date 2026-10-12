@@ -422,7 +422,7 @@ Welecome to NAIL Lab! The lab's goal is to develop resilient and sustainable int
     <div class="member-card-content">
       <img class="member-photo" src="/assets/img/members/pooyan.jfif" alt="Pooyan Ghodrati">
       <div class="member-name">Pooyan Ghodrati</div>
-      <div class="member-role">2025, M.S. Engineering Data Science (RA funded by NASA)</div>
+      <div class="member-role">2025, M.S. Engineering Data Science</div>
       <div class="member-research">Now: Data Scientist at Toyo Financial Group</div>
     </div>
   </div>
