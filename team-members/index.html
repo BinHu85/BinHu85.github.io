@@ -279,11 +279,17 @@
   .funding-logos img:hover {
     transform: scale(1.1);
   }
+  .funding-logos img.wide-logo {
+    max-width: 240px;
+  }
 
   @media (max-width: 768px) {
     .funding-logos img {
       max-height: 60px;
       max-width: 100px;
+    }
+    .funding-logos img.wide-logo {
+      max-width: 170px;
     }
   }
 
@@ -720,11 +726,12 @@
 <hr>
 
 <h3 id="acknowledgment">Acknowledgment</h3>
-<p>We gratefully acknowledge the support from our funding agencies, including the National Science Foundation (NSF), the National Aeronautics and Space Administration (NASA), and the Office of Naval Research (ONR), for enabling our research in intelligent and networked autonomous systems.</p>
+<p>We gratefully acknowledge the support from our funding agencies, including the National Science Foundation (NSF), the National Aeronautics and Space Administration (NASA), and the Office of Naval Research (ONR), as well as the NVIDIA Academic Grant Program, for enabling our research in intelligent and networked autonomous systems.</p>
 <div class="funding-logos">
   <img src="/assets/img/nsf-logo.jfif" alt="NSF Logo">
   <img src="/assets/img/nasa-logo.png" alt="NASA Logo">
   <img src="/assets/img/onr-logo.png" alt="ONR Logo">
+  <img class="wide-logo" src="/assets/img/nvidia-logo.png" alt="NVIDIA Logo">
 </div>
 
     </div>
